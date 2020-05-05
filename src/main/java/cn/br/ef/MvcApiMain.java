@@ -6,8 +6,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.reflections.Reflections;
+
 import cn.br.common.annotations.Order;
-import cn.br.common.view.Etl;
 import io.jooby.Jooby;
 import io.jooby.annotations.Path;
 import io.jooby.di.GuiceModule;
@@ -35,7 +35,6 @@ public final class MvcApiMain extends Jooby {
 		
 		addRoutes();
 		
-		install(new Etl());
 		install(new HikariModule());
 		install(new GsonModule());
 		log.debug("初始化成功");

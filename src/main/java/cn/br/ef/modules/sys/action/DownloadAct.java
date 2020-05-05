@@ -3,7 +3,6 @@ package cn.br.ef.modules.sys.action;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cn.br.common.exception.UploadDownloadException;
 import io.jooby.AttachedFile;
 import io.jooby.Context;
 import io.jooby.StatusCode;
@@ -38,7 +37,7 @@ public class DownloadAct {
 			return new AttachedFile(source);
 		} catch (Throwable e) {
 			final String error = String.format(ERROR, e.getMessage());
-			throw new UploadDownloadException(error, e);
+			throw new RuntimeException(error, e);
 		}
 	}
 }
