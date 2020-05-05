@@ -16,8 +16,8 @@ public class SimpleAct {
 
 	@GET
 	public void get(Context ctx) {
-		userBiz.test();
-		ctx.setResponseType(MediaType.TEXT).send("hello World 232423433333344444!");
+//		userBiz.test();
+		ctx.setResponseType(MediaType.TEXT).send("hello World 123222!");
 	}
 
 }

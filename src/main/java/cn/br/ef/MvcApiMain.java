@@ -35,7 +35,7 @@ public final class MvcApiMain extends Jooby {
 		
 		addRoutes();
 		
-		install(new HikariModule());
+//		install(new HikariModule());
 		install(new GsonModule());
 		log.debug("初始化成功");
 	}
